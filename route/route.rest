@@ -1,0 +1,20 @@
+GET http://localhost:3300/radnici
+
+###
+
+
+POST http://localhost:3300/radnici
+Content-Type: application/json
+
+{
+"ime": "kali",
+"prezime": "kalica"
+}
+
+###
+
+GET http://localhost:3300/5ee08f3ce4e5fc13208f5b74
+
+
+###
+DELETE http://localhost:3300/radnici/5edfd80cce38892d7c16e344
