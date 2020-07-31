@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 
 app.get('/', function (req, res) {
-   res.send('GET request to the homepage')
+   res.send('hello world')
  })
 app.get("/radnici", async (req, res) =>{
    try {
