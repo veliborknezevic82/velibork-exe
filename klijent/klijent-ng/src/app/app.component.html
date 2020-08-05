@@ -1,15 +1,16 @@
+<button (click)="radiOki(1)"></button>
 <div class="col-lg-6">
   <form>
   <div class="form-group">
     <label for="formGroupExampleInput">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+    <input type="text" name = "input1" [(ngModel)]="broj1" class="form-control">
   </div>
   <div class="form-group">
     <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+    <input type="text" name = "input2" [(ngModel)]="broj2" class="form-control">
     <br>
-    <button type="button" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-primary" (click)="radiOki()">Submit</button>
   </div>
 </form></div> 
-
+<app-test></app-test>
 <router-outlet></router-outlet>
