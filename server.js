@@ -4,10 +4,13 @@ const bodyParser = require("body-parser");
 const connectDB = require("./DB/connection");
 const Majstors = require("./DB/radnik");
 
+
+
 connectDB();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
+
 
 app.get('/', function (req, res) {
    res.send('hello world')
