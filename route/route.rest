@@ -7,8 +7,8 @@ POST http://localhost:3300/radnici
 Content-Type: application/json
 
 {
-"ime": "kali",
-"prezime": "kalica"
+"ime": "tanja",
+"prezime": "knezevic"
 }
 
 ###

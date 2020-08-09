@@ -1,4 +1,4 @@
-<button (click)="radiOki(1)"></button>
+<button class="btn btn-danger" >add</button>
 <div class="col-lg-6">
   <form>
   <div class="form-group">
@@ -12,5 +12,12 @@
     <button type="button" class="btn btn-primary" (click)="radiOki()">Submit</button>
   </div>
 </form></div> 
-<app-test></app-test>
+<ul>
+  <li *ngFor="let ok of oki">{{ok.ime}}</li>
+</ul>
+<br>
+<ul>
+  <li *ngFor="let kontakt of kontakti">{{ kontakt.ime }} <br> {{kontakt.prezime}}</li>
+</ul>
+
 <router-outlet></router-outlet>

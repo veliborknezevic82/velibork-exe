@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { TestService } from './servisi/test.service';
+import { Kontakt } from "../../../kontakt.";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -7,13 +9,24 @@ import { TestService } from './servisi/test.service';
   styleUrls: ['./app.component.css'],
   providers: [TestService]
 })
-export class AppComponent {
+export class AppComponent{
 
-   public broj1 = ""
-   public broj2 = ""
-  constructor(private _testService: TestService){}
+oki = [{"ime": "kali"}, {"ime":"marko"}]
+  private kontakti: Kontakt[]=[];
 
-  radiOki(){
-    this._testService.radi(this.broj1)
+  constructor(private _testService: TestService){ 
+    
+      this._testService.getContacts().
+      subscribe((res: Kontakt[]) => {
+      this.kontakti=res} )
+    
+    
   }
+
+  
+
+
 }
+
+  
+

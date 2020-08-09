@@ -9,14 +9,11 @@ import { TestService } from '../../servisi/test.service';
 })
 export class TestComponent implements OnInit {
 
-  public broj =""
+  
 
   constructor(private _testService: TestService) { }
 
-radiOk (){
-  this._testService.radi(this.broj)
-  this.broj=""
-}
+
   ngOnInit() {
   }
 

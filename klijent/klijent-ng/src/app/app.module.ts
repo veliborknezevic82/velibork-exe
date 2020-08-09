@@ -7,6 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewModule } from './view-model/view.module';
 import { TestService } from './servisi/test.service';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import "rxjs/add/operator/map";
+
 
 
 @NgModule({
@@ -20,7 +23,12 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule.forRoot(),
     ViewModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    
+    
+    
+
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
