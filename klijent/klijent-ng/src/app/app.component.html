@@ -1,20 +1,16 @@
-<button class="btn btn-danger" >add</button>
 <div class="col-lg-6">
-  <form>
+  <form  #forma="ngForm" (ngSubmit)="postCon(forma.value)">
   <div class="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" name = "input1" [(ngModel)]="broj1" class="form-control">
+    <label for="ime">Example label</label>
+    <input type="text" ngModel name ="ime" class="form-control">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" name = "input2" [(ngModel)]="broj2" class="form-control">
+    <label for="prezime">Another label</label>
+    <input type="text" ngModel name ="prezime" class="form-control">
     <br>
-    <button type="button" class="btn btn-primary" (click)="radiOki()">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </div>
 </form></div> 
-<ul>
-  <li *ngFor="let ok of oki">{{ok.ime}}</li>
-</ul>
 <br>
 <ul>
   <li *ngFor="let kontakt of kontakti">{{ kontakt.ime }} <br> {{kontakt.prezime}}</li>
