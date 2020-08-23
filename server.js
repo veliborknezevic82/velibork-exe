@@ -27,7 +27,7 @@ app.get("/radnici", async (req, res) =>{
 
 app.get("/:radniciId", async (req, res) =>{
    try {
-      const jedanRadnik = await Radni.findById(req.params.radniciId)
+      const jedanRadnik = await Majstors.findById(req.params.radniciId)
       res.json(jedanRadnik)
    } catch (error) {
       res.status(500).json({message: error.message})
@@ -46,9 +46,9 @@ app.post("/radnici", (req, res) =>{
    
 });
 
-app.get("/:radniciId", async (req, res) =>{
+app.delete("/:radniciId", async (req, res) =>{
    try {
-      const jedanRadnik = await Radni.findById(req.params.radniciId)
+      const jedanRadnik = await Majstors.findByIdAndDelete(req.params.radniciId)
       res.json(jedanRadnik)
    } catch (error) {
       res.status(500).json(error.message)

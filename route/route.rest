@@ -13,8 +13,8 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3300/5ee08f3ce4e5fc13208f5b74
+GET http://localhost:3300/5f3fe1cc05040d1100e2df32
 
 
 ###
-DELETE http://localhost:3300/radnici/5edfd80cce38892d7c16e344
+DELETE http://localhost:3300/5f3fe1cc05040d1100e2df32

@@ -1,5 +1,5 @@
 <div class="col-lg-6">
-  <form  #forma="ngForm" (ngSubmit)="postCon(forma.value)">
+  <form  #forma="ngForm" (ngSubmit)="postCon(forma)" >
   <div class="form-group">
     <label for="ime">Example label</label>
     <input type="text" ngModel name ="ime" class="form-control">
@@ -8,12 +8,13 @@
     <label for="prezime">Another label</label>
     <input type="text" ngModel name ="prezime" class="form-control">
     <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" >Submit</button>
   </div>
 </form></div> 
 <br>
 <ul>
-  <li *ngFor="let kontakt of kontakti">{{ kontakt.ime }} <br> {{kontakt.prezime}}</li>
+  <li *ngFor="let kontakt of kontakti">{{ kontakt.ime }} <br>{{kontakt.prezime}} <br>
+    <button type="button" class="btn btn-danger" (click)="delete(kontakt._id)">Delete</button><br></li>
 </ul>
 
 <router-outlet></router-outlet>

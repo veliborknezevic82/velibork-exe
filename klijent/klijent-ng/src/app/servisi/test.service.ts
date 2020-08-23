@@ -11,6 +11,8 @@ import { Observable}  from "rxjs/Observable";
 })
 export class TestService {
 
+kontakt: Kontakt;
+
   constructor(private http: HttpClient) { }
 
   getContacts(){
@@ -22,7 +24,8 @@ export class TestService {
       return this.http.post("http://localhost:3300/radnici", kontakt)
   }
   deleteContact(_id: string){
-      return this.http.delete("http://localhost:3300/radnici/" +_id)
+      return this.http.delete("http://localhost:3300/"+_id)
+      
   }
 }
 

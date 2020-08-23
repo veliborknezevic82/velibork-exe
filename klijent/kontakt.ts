@@ -1,6 +1,19 @@
 export class Kontakt {
 
-    _id?: string;
-    ime: string;
+    _id?: [{type:string}, {required}];
+    ime: [{type:string}, {required}];
     prezime: string;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
