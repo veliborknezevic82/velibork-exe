@@ -1,8 +1,10 @@
 export class Kontakt {
 
-    _id?: [{type:string}, {required}];
-    ime: [{type:string}, {required}];
+    _id?: string;
+    ime: string;
     prezime: string;
+    email: string;
+    lozinka: string;
 }
 
 

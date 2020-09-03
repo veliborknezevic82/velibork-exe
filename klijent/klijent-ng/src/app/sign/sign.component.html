@@ -1,0 +1,40 @@
+<div class="form">
+<div class="col-lg-6">
+    <form  #forma="ngForm" (ngSubmit)="postCon(forma)" >
+    <div class="form-group">
+      <label for="ime">Ime</label>
+        <input type="text" 
+          ngModel name ="ime" 
+          class="form-control" 
+          placeholder="Unesite ime">
+    </div>
+    <div class="form-group">
+      <label for="prezime">Prezime</label>
+        <input type="text" 
+          ngModel name ="prezime" 
+          class="form-control" 
+          placeholder="Unesite prezime">
+    </div>
+      <div class="form-group">
+        <label for="email">Mail</label>
+          <input type="text" 
+            ngModel name ="email" 
+            class="form-control"
+            placeholder="Unesite mail">
+      </div>
+      <div class="form-group">
+        <label for="lozinka">Lozinka</label>
+          <input type="text" 
+            ngModel name ="lozinka" 
+            class="form-control"
+            placeholder="Unesite lozinku">
+      </div>
+      <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+  
+</div> 
+  
+  
+

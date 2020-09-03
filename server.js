@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connectDB = require("./DB/connection");
-const Majstors = require("./DB/radnik");
+const Majstors = require("./DB/Shemas/radnik");
 const cors = require("cors");
 
 
@@ -37,7 +37,9 @@ app.get("/:radniciId", async (req, res) =>{
 app.post("/radnici", (req, res) =>{
    const radnik = new Majstors({
       ime: req.body.ime,
-      prezime: req.body.prezime
+      prezime: req.body.prezime,
+      email: req.body.email,
+      lozinka: req.body.lozinka
    })
    radnik.save((err, saveRadnik)=>{
         if(err){console.log("sranje")}
