@@ -1,0 +1,18 @@
+<button mat-icon-button color="accent" [matMenuTriggerFor]="menu" aria-label="Example icon button with a menu icon"><mat-icon>menu</mat-icon></button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="automobili">Automobili</button>
+  <button mat-menu-item [matMenuTriggerFor]="gradevinarstvo">Građevinarstvo</button>
+  
+</mat-menu>
+<mat-menu #automobili="matMenu">
+  <button mat-menu-item><a href="">Automehaničar</a></button>
+  <button mat-menu-item><a href="">Autolakirer</a></button>
+  <button mat-menu-item><a href="">Autoelektričar</a></button>
+</mat-menu>
+<mat-menu #gradevinarstvo="matMenu">
+  <button mat-menu-item><a href="">Automehaničar</a></button>
+  <button mat-menu-item>Autolimar</button>
+  <button mat-menu-item>Autoelektričar</button>
+</mat-menu>
+
+

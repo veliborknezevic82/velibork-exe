@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import "rxjs/add/operator/map";
-import { Kontakt } from '../../../../kontakt';
+import { Kontakt } from '../modeli/registracija';
 import { Observable}  from "rxjs/Observable";
 
 

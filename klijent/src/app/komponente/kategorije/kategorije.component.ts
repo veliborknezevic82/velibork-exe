@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TestService} from '../servisi/test.service';
-import { Kontakt} from "../../../../kontakt"
+import { TestService} from '../../servisi/test.service';
+import { Kontakt} from "../../modeli/registracija";
+import { MatTableDataSource } from '@angular/material/table';
 
 
 @Component({
@@ -10,7 +11,12 @@ import { Kontakt} from "../../../../kontakt"
   
 })
 export class KategorijeComponent implements OnInit {
-  private kontakti: Kontakt[]=[];
+
+  ELEMENT_DATA: Kontakt[];
+  displayedColumns: string[] = ['ime', 'prezime', 'email', 'pasword'];
+  dataSource = new MatTableDataSource(this.ELEMENT_DATA);
+
+  
   private kontaktOsoba: Kontakt;
   
   private brojevi;
@@ -21,14 +27,13 @@ export class KategorijeComponent implements OnInit {
 
   ngOnInit() {
     this.get();
-    for( let i=1; i<10; i++){ this.brojevi.push[i]
-    console.log(this.brojevi)}
+   
   }
 
   get(){
     this._testService.getContacts().
     subscribe((res: Kontakt[]) => {
-    this.kontakti=res} )
+    this.dataSource.data=res} )
   }
 
   delete(_id: string){

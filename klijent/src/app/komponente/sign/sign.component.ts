@@ -1,7 +1,7 @@
 import { Component, OnInit, Output} from '@angular/core';
-import { TestService } from '../servisi/test.service';
-import { Kontakt } from "../../../../kontakt";
-import { NgForm, FormGroup } from '@angular/forms';
+import { TestService } from '../../servisi/test.service';
+import { Kontakt } from "../../modeli/registracija";
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sign',
